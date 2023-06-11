@@ -29,10 +29,7 @@ describe('Teste Site Itaú Empresas', () => {
     it('Teste login', () => {
         cy.visit('https://www.itau.com.br/empresas')
         cy.get('#agencia').type('1234')
-        cy.get('#conta').type('987654')
-        //cy.visit('https://www.itau.com.br/empresas')
-        cy.reload()
-        
+        cy.get('#conta').type('987654')   
     })
 
     it('Teste login', () => {
@@ -41,8 +38,5 @@ describe('Teste Site Itaú Empresas', () => {
         cy.get('#agencia').should('have.value', '1234')
         cy.get('#conta').type('987654')
         cy.get('#conta').should('have.value', '98765-4')
-        //cy.visit('https://www.itau.com.br/empresas')
-        cy.reload()
-        
     })
 })
