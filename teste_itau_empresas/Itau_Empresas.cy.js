@@ -18,6 +18,7 @@ describe('Teste Site Itaú Empresas', () => {
         cy.get(':nth-child(3) > [data-component="Header"] > .navigationMenu__item > .navigationMenu__label').click()
         //busca - inserindo e validando a busca por 'boletos'
         cy.get('#open-search').click()
+        //seleciona o campo de entrada da busca e aguarda e o seu carregamento
         cy.get('#inputSearch-search',{timeout: 10000}).should('exist')
         cy.get('#inputSearch-search').type('boletos')
         cy.get('#inputSearch-search').should('have.value', 'boletos')
